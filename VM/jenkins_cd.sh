@@ -5,9 +5,10 @@
 curl -LO https://repo.continuum.io/archive/Anaconda3-4.3.0-Linux-x86_64.sh &&\
 	bash Anaconda3-4.3.0-Linux-x86_64.sh -b &&\
 	rm Anaconda3-4.3.0-Linux-x86_64.sh &&\
-	export PATH=${PATH}:${HOME}/anaconda3/bin &&\
+	export export PATH=${HOME}/anaconda3/bin:$PATH &&\
 	conda update -y conda &&\
-	conda update -y python
+	conda update -y python &&\
+	echo 'export PATH=${HOME}/anaconda3/bin:$PATH' >> ~/.bashrc
 
 # Install Java
 sudo ap-get update -y && sudo apt-get install -y default-jdk
