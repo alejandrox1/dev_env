@@ -5,7 +5,7 @@
 curl -LO https://repo.continuum.io/archive/Anaconda3-4.3.0-Linux-x86_64.sh &&\
 	bash Anaconda3-4.3.0-Linux-x86_64.sh -b &&\
 	rm Anaconda3-4.3.0-Linux-x86_64.sh &&\
-	export ${HOME}/anaconda3/bin &&\
+	export PATH=${PATH}:${HOME}/anaconda3/bin &&\
 	conda update -y conda &&\
 	conda update -y python
 
