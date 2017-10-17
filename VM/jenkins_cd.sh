@@ -44,6 +44,8 @@ apt-cache madison docker-ce
 sudo docker run hello-world
 
 # Docker-compose
+sudo rm /usr/local/bin/docker-compose
+
 # get latest docker compose released tag
 COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
 
