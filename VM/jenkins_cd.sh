@@ -11,7 +11,7 @@ curl -LO https://repo.continuum.io/archive/Anaconda3-4.3.0-Linux-x86_64.sh &&\
 	echo 'export PATH=${HOME}/anaconda3/bin:$PATH' >> ~/.bashrc
 
 # Install Java
-sudo ap-get update -y && sudo apt-get install -y default-jdk
+sudo apt-get update -y && sudo apt-get install -y default-jdk
 
 # Docker Installation in Ubuntu/Xenial 16.04
 # Unistall old versions
