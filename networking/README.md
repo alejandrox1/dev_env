@@ -5,7 +5,7 @@
 ip route get 8.8.8.8 | awk '{print $NF; exit}'
 ```
 
-* Find devices connected to your private network `find_lanl_devices.sh`
+* Find devices connected to your private network `find_lan_devices.sh`
 ```
 lanLookup() {                                                                   
     nslookup 192.168.254.$1 | grep 'name' | awk '{print $NF}' | sed 's/\.$//'   
