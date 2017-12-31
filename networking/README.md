@@ -1,3 +1,9 @@
+# Firewall Made Easy
+```
+sudo ufw allow from 192.168.1.0/24 to any port 22
+```
+
+
 # SSH Tunneling between LAN-connected machines
 
 * Find your internal IP address:
