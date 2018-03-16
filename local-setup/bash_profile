@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Load shell dotfile and stuff
+for file in ~/.{dockerfunc}; do
+    if [[ -r "$file" ]] && [[ -f "$file" ]]; then
+        source "$file"
+    fi
+done
+unset file
