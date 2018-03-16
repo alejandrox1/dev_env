@@ -13,7 +13,9 @@ set wrap
 set linebreak
 set nolist
 set formatoptions-=t
+set et
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smarttab
 set mouse=c
