@@ -1,2 +1,7 @@
 # Display working directory on command line
 export PS1='\[\e[92;1m\]$(whoami) -> \[\e[0m\]\[\e[34;1m\]${PWD/*\//}\[\e[0m\]$ '
+
+# Load our fancy shell 'macros'
+if [[ -f "${HOME}/.bash_profile" ]]; then
+    source "${HOME}/.bash_profile"
+fi
