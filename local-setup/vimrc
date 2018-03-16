@@ -1,0 +1,19 @@
+set nocompatible
+syntax on                                                                        
+filetype on
+filetype plugin indent on
+set autoindent
+set backspace=indent,eol,start
+set ruler
+set showcmd
+set hlsearch
+set textwidth=79                                                                 
+set colorcolumn=80
+set wrap
+set linebreak
+set nolist
+set formatoptions-=t
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set mouse=c
