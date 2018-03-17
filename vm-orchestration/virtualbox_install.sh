@@ -1,4 +1,12 @@
 #!/bin/bash
+#
+# see:
+#
+# VirtualBox - RTR3InitEx failed with rc=-1912 (rc=-1912) 
+# https://askubuntu.com/questions/900794/virtualbox-rtr3initex-failed-with-rc-1912-rc-1912
+#
+# SpectreAndMeltdown
+# https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown
 
 sudo apt-get purge --auto-remove -y virtualbox
 
