@@ -1,9 +1,23 @@
 #!/bin/bash
 
-# Load shell dotfile and stuff
-for file in ~/.{dockerfunc}; do
-    if [[ -r "$file" ]] && [[ -f "$file" ]]; then
-        source "$file"
-    fi
+GOSRC=${HOME}/go/src/github.com/alejandrox1/cool_go
+
+# Load our shell dotfiles
+for file in ~/.{bash_prompt,}; do
+	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
+		# shellcheck source=/dev/null
+		source "$file"
+	fi
 done
 unset file
+
+# Home-made scripts for various utilities
+if [[ ! -d ~/scripts ]]; then
+    mkdir ~/scripts
+fi
+
+if [[ -f "${GOSRC}/containers/desktop-apps/chrome/ubuntu-chrome/run-chrome.sh" ]]; then
+    cp "${GOSRC}/containers/desktop-apps/chrome/ubuntu-chrome/run-chrome.sh" ~/scripts
+fi
+
+#export PATH=$PATH:~/scripts
