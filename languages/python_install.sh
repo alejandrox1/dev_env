@@ -6,7 +6,7 @@ bash Anaconda3-4.3.0-Linux-x86_64.sh
 
 rm Anaconda3-4.3.0-Linux-x86_64.sh
 
-source ~/.bashrc
+. ~/.bashrc
 
 conda update -y conda
 
