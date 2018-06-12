@@ -5,7 +5,7 @@ trap "echo terminating program...; exit;" SIGINT SIGTERM
 intranet=1 #254
 
 lanLookup() {
-	nslookup 192.168.${intranet}.$1. | grep 'name' | awk '{print $NF}' | sed 's/\.$//'
+	nslookup 192.168.${intranet}.$1 | grep 'name' | awk '{print $NF}' | sed 's/\.$//'
 }
 
 for ip in $(seq 1 254); do 
