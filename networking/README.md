@@ -8,7 +8,11 @@ sudo ufw allow from 192.168.1.0/24 to any port 22
 
 * Find your internal IP address:
 ```
-ip route get 8.8.8.8 | awk '{print $NF; exit}'
+ip route get 8.8.8.8
+
+#or
+
+hostname -I
 ```
 
 * Find devices connected to your private network `find_lan_devices.sh`
