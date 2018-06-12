@@ -12,5 +12,5 @@ for ip in $(seq 1 254); do
 	ping -c 1 192.168.${intranet}.$ip > /dev/null; 
 	[ $? -eq 0 ] && echo "192.168.${intranet}.${ip} UP" && lanLookup $ip && echo;
 
-	(($ip % 10 == 0)) && echo "Ping'd .${intranet}.${ip}/254"
+	(($ip % 20 == 0)) && echo "Ping'd .${intranet}.${ip}/254"
 done
