@@ -1,0 +1,6 @@
+git config --global user.email "your@email.com"
+git config --global user.name "alejandrox1"
+
+git config --global core.editor "vim"
+
+git config --gloabl credential.helper store
