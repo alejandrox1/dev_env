@@ -78,7 +78,7 @@ The following instructions assume you are running a Debian distro.
       sudo service nfs-kernel-server restart
       ```
 
-  2. `nfs-client`. Similarly,
+   2. `nfs-client`. Similarly,
       ```
       sudo apt install -y nfs-common
 
