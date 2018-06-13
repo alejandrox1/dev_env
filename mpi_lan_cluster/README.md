@@ -117,3 +117,11 @@ running:
 ```
 rpcinfo -p | grep nfs
 ```
+
+To clean up your `ufw` rules, try:
+```
+sudo ufw status numbered
+
+# Delete the third rule (for example).
+sudo ufw delete 3
+```
