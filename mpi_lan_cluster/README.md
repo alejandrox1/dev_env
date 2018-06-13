@@ -100,3 +100,20 @@ The following instructions assume you are running a Debian distro.
       ```
       df -h
       ```
+
+# Notes
+If you are getting `Connection refused`s due to firewall rules, try running the
+following commands:
+```
+# Allow incoming ssh trafic from a subnet.
+sudo ufw allow from 192.168.1.0/10 to any port 22
+
+# Allow traffic on port 2049 for NFS.
+sudo ufw allow from 192.168.1.0/10 to any port 2049
+```
+
+To make sure you are opening the correct port(s) for nfs you can always try
+running:
+```
+rpcinfo -p | grep nfs
+```
