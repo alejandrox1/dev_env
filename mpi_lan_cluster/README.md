@@ -25,12 +25,12 @@ The following instructions assume you are running a Debian distro.
    miuser`.
 
 4. Setup SSH
-   4.1. Install your ssh server
+   1. Install your ssh server
       ```
       sudo apt-get install -y openssh-server
       ```
 
-   4.2. Login as `mpiuser`
+   2. Login as `mpiuser`
       ```
       su - mpiuser
       ```
@@ -55,7 +55,7 @@ The following instructions assume you are running a Debian distro.
       ```
 
 5. Setting up NFS.
-   5.1. Setup the `nfs-server`. Create a directory to share
+   1. Setup the `nfs-server`. Create a directory to share
       ```
       sudo apt install -y nfs-kernel-server
 
@@ -78,7 +78,7 @@ The following instructions assume you are running a Debian distro.
       sudo service nfs-kernel-server restart
       ```
 
-   5.2. `nfs-client`. Similarly,
+  2. `nfs-client`. Similarly,
       ```
       sudo apt install -y nfs-common
 
