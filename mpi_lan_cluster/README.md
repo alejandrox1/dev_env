@@ -46,4 +46,10 @@ The following instructions assume you are running a Debian distro.
       ```
 
       In case you want to do `ssh-keygen -t dsa` then you may want to try doing
-      `ssh-copy-id -i ~/.ssh/id_rsa other`.
+      `ssh-copy-id -i ~/.ssh/id_rsa other`. 
+      If you are having problems with just the previous two steps try running
+      the following as well before attempting to login
+      ```
+      eval `ssh-agent`
+      ssh-add ~/.ssh/id_dsa
+      ```
