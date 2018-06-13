@@ -34,3 +34,16 @@ The following instructions assume you are running a Debian distro.
       ```
       su - mpiuser
       ```
+
+      and generate keys 
+      ```
+      ssh-keygen
+      ```
+
+      Add the generated keys to each of the computers
+      ```
+      ssh-copy-id -i other
+      ```
+
+      In case you want to do `ssh-keygen -t dsa` then you may want to try doing
+      `ssh-copy-id -i ~/.ssh/id_rsa other`.
