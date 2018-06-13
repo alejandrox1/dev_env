@@ -102,6 +102,7 @@ The following instructions assume you are running a Debian distro.
       ```
 
 # Notes
+## Firewall
 If you are getting `Connection refused`s due to firewall rules, try running the
 following commands:
 ```
@@ -124,4 +125,12 @@ sudo ufw status numbered
 
 # Delete the third rule (for example).
 sudo ufw delete 3
+```
+
+## MPI hostfile specifications
+It may come in handy knowing the number of cores per node when you want to
+specify available nodes for your mpi run. A quick way of getting the number of
+cores in your computer is to run
+```
+grep -c ^processor /proc/cpuinfo
 ```
