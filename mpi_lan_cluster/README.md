@@ -53,3 +53,50 @@ The following instructions assume you are running a Debian distro.
       eval `ssh-agent`
       ssh-add ~/.ssh/id_dsa
       ```
+
+5. Setting up NFS.
+   a. Setup the `nfs-server`. Create a directory to share
+      ```
+      sudo apt install -y nfs-kernel-server
+
+      # Create a directory to share.
+      mkdir cloud
+      ```
+
+      To export the `cloud` directory modify `/etc/exports`
+      ```
+      /home/mpiuser/cloud *(rw,sync,no_root_squash,no_subtree_check)
+      ```
+
+      Export all unexported directories
+      ```
+      exportfs -a
+      ```
+
+      If required, restart the nfs server by doing
+      ```
+      sudo service nfs-kernel-server restart
+      ```
+
+   b. `nfs-client`. Similarly,
+      ```
+      sudo apt install -y nfs-common
+
+      # Create a mount point.
+      mkdir cloud
+      ```
+
+      Mount the nfs-server by creating an entry in `/etc/fstab`
+      ```
+      # MPI LAN cluster.
+      master:/home/mpiuser/cloud /home/mpiuser/cloud
+      ```
+      To do this manually,
+      ```
+      sudo mount -t nfs master:/home/mpiuser/cloud ~/cloud
+      ```
+
+      Check your mounted directories
+      ```
+      df -h
+      ```
