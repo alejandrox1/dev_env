@@ -10,7 +10,7 @@
 
 sudo apt-get purge --auto-remove -y virtualbox
 
-sudo su -c "echo 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib' >> /etc/apt/sources.list" && \
+sudo su -c "echo 'deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib' >> /etc/apt/sources.list.d/virtualbox.list" && \
     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - && \
     sudo apt-get update -y && \
     sudo apt-get install -y virtualbox-5.2 && \
