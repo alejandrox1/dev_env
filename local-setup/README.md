@@ -51,3 +51,17 @@ sudo apt-get update -y && sudo apt-get -y install bash-completion
 
 ### Mac
 Simply run `./mac-bash-completion.sh`.
+
+## Useful aliases
+### MAC
+If you are using ITerm2 then you may not be able to distinguish files from
+directories from your default `ls`. To fix this add the following alias to your
+`~/.bash_profile`:
+```
+export LSCOLORS="ExFxCxDxCxegedabagacad"
+alias ls='ls -FG'
+```
+
+This will somewhat emulate a Debian terminal.
+For more info on the `$LSCOLORS` environment variable see 
+[How do I get different colors for directories, etc. in iTerm2?](https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2)
