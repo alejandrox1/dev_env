@@ -1,5 +1,8 @@
 # Installing and setting up Docker
 
+## Windows 
+Go and [download Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
+
 ## Mac
 Go and [download Docker](https://docs.docker.com/docker-for-mac/install/) then
 just follow the instruction.
