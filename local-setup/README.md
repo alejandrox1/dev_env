@@ -25,6 +25,8 @@ git config --gloabl credential.helper cache
 ```
 This will by default, keep your credentials in memory for some 15 minutes.
 
+
+
 ## Configuring your bash prompt
 In the current directory you will find a file name `bash_prompt` this file is
 based off 
@@ -65,3 +67,18 @@ alias ls='ls -FG'
 This will somewhat emulate a Debian terminal.
 For more info on the `$LSCOLORS` environment variable see 
 [How do I get different colors for directories, etc. in iTerm2?](https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2)
+
+
+
+# Configuring VIM
+## [pathogen.vim](https://github.com/tpope/vim-pathogen)
+Manage your `runtimepath` with ease. 
+In practical terms, pathogen.vim makes it super easy to install plugins and 
+runtime files in their own private directories.
+
+### [VIM Hashicorp tools](https://github.com/hashivim/vim-hashicorp-tools)
+* `Terraform`
+* `Consul`
+* `Vagrant`
+* `Packer`
+* `Vault project` etc.
